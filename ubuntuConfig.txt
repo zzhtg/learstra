@@ -1,0 +1,28 @@
+更换清华的源
+cd /etc/apt
+
+sudo cp sources.list sources.list.bak
+
+sudo vi sources.list
+
+deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial main restricted
+
+deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-updates main restricted
+
+deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial universe
+
+deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-updates universe
+
+deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial multiverse
+
+deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-updates multiverse
+
+deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse
+
+deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security main restricted
+
+deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security universe deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security multiverse
+
+安装需要的东西
+sudo apt-get update && sudp apt-get upgrade
+sudo apt-get install cmake make clang gcc g++ python3-pip
