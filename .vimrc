@@ -12,6 +12,7 @@ set matchtime=5
 set incsearch
 syntax enable
 syntax on
+set vb t_vb=
 set autoindent
 set cindent
 set ignorecase

@@ -5,13 +5,14 @@ sed -i '$a SigLevel = Optional TrustedOnly' /etc/pacman.conf
 sed -i '$a Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch' /etc/pacman.conf
 
 pacman -Syy && pacman -S archlinuxcn-keyring
-pacman -S zsh fcitx-im fcitx fcitx-sogoupinyin fcitx-configtool git vim clang make cmake python-pip shadowsocks-qt5
+pacman -S zsh fcitx-im fcitx fcitx-sogoupinyin fcitx-configtool git vim clang make cmake python-pip shadowsocks-qt5 -y
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 #curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+mv .pip ~
+mv .vim ~
 cp .xprofile ~
-cp .pip ~
-cp .vim ~
 cp .vimrc ~
+
 vim .vimrc < EOF
 :PlugInstall
 EOF
