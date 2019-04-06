@@ -1,10 +1,8 @@
 pacman-mirrors -i -c China -m rank
-sed 's/[archlinuxcn]
-SigLevel = Optional TrustedOnly
-Server = https:\/\/mirrors.ustc.edu.cn/archlinuxcn\/$arch/
-[archlinuxcn]
-SigLevel = Optional TrustedOnly
-Server = https:\/\/mirrors.ustc.edu.cn\/archlinuxcn\/$arch/g' /etc/pacman.conf
+
+sed -i '$a [archlinuxcn]' /etc/pacman.conf
+sed -i '$a SigLevel = Optional TrustedOnly' /etc/pacman.conf
+sed -i '$a Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch/g' /etc/pacman.conf
 
 pacman -Syy && pacman -S archlinuxcn-keyring
 pacman -S zsh fcitx-im fcitx fcitx-sogoupinyin fcitx-configtool git vim clang make cmake python-pip shadowsocks-qt5
