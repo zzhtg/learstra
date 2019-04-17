@@ -9,10 +9,7 @@ pacman -S zsh fcitx-im fcitx fcitx-sogoupinyin fcitx-configtool git vim clang ma
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 #curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 pwd
-mv .pip ~
-mv .vim ~
-mv .xprofile ~
-mv .vimrc ~
+mv .pip .vim .xprofile .vimrc ~
 ls -a ~
 
 vim .vimrc < EOF
