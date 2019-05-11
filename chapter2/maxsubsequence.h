@@ -10,12 +10,14 @@
 
 #define MAX 5000
 
-int* general_array(int []);
-void runtime();
+int* general_array(int array[]);
+int max_sum1(int* parray, int n);
 
-int max_sum1(int*, int);
-int max_sum2(int*, int);
-int max_sum3(int*, int);
-int max_sum4(int*, int);
+int max_sum2(int* parray, int n);
+int max_sequence_sum(int* parray, int left, int right);
 
+int max_sum3(int* parray, int n);
+int max_sum4(int* parray, int n);
+
+extern int run(void);
 #endif      //CHAPTER2_MAXSUBSEQUENCE_H_

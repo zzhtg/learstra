@@ -2,13 +2,10 @@
 * This is a file aim to test properties of C programming language
 */
 
-#include <stdio.h>
-
-#define max(a, b) ((a) > (b) ? (a) : (b))
-#define max3(a, b, c) (max(a, max(b, c)))
+#include "chapter2/maxsubsequence.h"
 
 int main()
 {
-    printf("%d\n", max3(1 + 2, 2 + 2, 3 + 3));
+    run();
     return 0;
 }
