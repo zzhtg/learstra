@@ -7,19 +7,24 @@ max_sum2: O(NlogN)
 max_sum3: O(N) (if maxsubsequence <= 0 return 0)
 max_sum4: O(N) 
 */
-#include "maxsubsequence.h"
 
-int* general_array(int a[])
+#include "../standard.h"
+
+#ifndef CHAPTER2_MAXSUBSEQUENCE_H_
+#include "maxsubsequence.h"
+#endif CHAPTER2_MAXSUBSEQUENCE_H_
+
+int* general_array(int array[])
 {
     int i;
 
     printf("Now, we general a array to continue\n");
     srand((unsigned) time(NULL));
     for (i = 0; i < MAX; i++){
-        a[i] = (rand() - RAND_MAX / 2) % 100;
+        array[i] = (rand() - RAND_MAX / 2) % 100;
     }
     printf("All done!\n");
-    return a;
+    return array;
 }
 
 int max_sum1(int* parray, int n)
@@ -106,10 +111,15 @@ int max_sum4(int* parray, int n)
     return maxSum;
 }
 
-extern int run(void)
+void func(void)
+{
+    printf("%s\n", __FUNCTION__);
+}
+
+int run(void)
 {
     long sum;
-    static int a[MAX];
+    int a[MAX];
     int* parray = general_array(a);
     clock_t start1, start2, start3, start4;
 
