@@ -8,11 +8,8 @@ max_sum3: O(N) (if maxsubsequence <= 0 return 0)
 max_sum4: O(N) 
 */
 
-#include "../standard.h"
-
-#ifndef CHAPTER2_MAXSUBSEQUENCE_H_
-#include "maxsubsequence.h"
-#endif CHAPTER2_MAXSUBSEQUENCE_H_
+#include "../include/standard.h"
+#include "../include/maxsubsequence.h"
 
 int* general_array(int array[])
 {

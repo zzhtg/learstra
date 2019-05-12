@@ -1,5 +1,5 @@
-#ifndef CHAPTER2_MAXSUBSEQUENCE_H_
-#define CHAPTER2_MAXSUBSEQUENCE_H_
+#ifndef INCLUDE_MAXSUBSEQUENCE_H_
+#define INCLUDE_MAXSUBSEQUENCE_H_
 
 #define max(a, b) (((a) > (b)) ? (a) : (b))
 #define max3(a, b, c) (max(a, max(b, c)))
@@ -17,4 +17,4 @@ int max_sum4(int* parray, int n);
 
 void func(void);
 int run(void);
-#endif      //CHAPTER2_MAXSUBSEQUENCE_H_
+#endif      //INCLUDE_MAXSUBSEQUENCE_H_

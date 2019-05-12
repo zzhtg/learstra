@@ -1,7 +1,7 @@
 #ifndef CHAPTER2_BIN_SEARCH_H_
 #define CHAPTER2_BIN_SEARCH_H_
 
-#include <stdio.h>  
+#include <standard.h>  
 
 #define MAX 10000
 #define NOTFOUND -1

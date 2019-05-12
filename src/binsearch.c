@@ -5,7 +5,7 @@
 * O(logn)
 */
 
-#include "binsearch.h"
+#include "../include/standard.h"
 
 int main()
 {

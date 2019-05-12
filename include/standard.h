@@ -8,6 +8,5 @@
 #include <error.h>
 #include <time.h>
 
-extern void func(void);
 #endif
 
