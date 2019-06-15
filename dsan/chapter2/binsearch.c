@@ -5,7 +5,16 @@
 * O(logn)
 */
 
-#include "../include/standard.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+#define MAX 10000
+#define NOTFOUND -1
+
+void run(void);
+int *create_array();
+int binary_search(const int array[], int x, int n);
 
 int main()
 {

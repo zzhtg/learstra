@@ -8,8 +8,26 @@ max_sum3: O(N) (if maxsubsequence <= 0 return 0)
 max_sum4: O(N) 
 */
 
-#include "../include/standard.h"
-#include "../include/maxsubsequence.h"
+#include <stdio.h>
+#include <time.h>
+#include <stdlib.h>
+
+#define max(a, b) (((a) > (b)) ? (a) : (b))
+#define max3(a, b, c) (max(a, max(b, c)))
+
+#define MAX 5000
+
+int* general_array(int array[]);
+int max_sum1(int* parray, int n);
+
+int max_sum2(int* parray, int n);
+int max_sequence_sum(int* parray, int left, int right);
+
+int max_sum3(int* parray, int n);
+int max_sum4(int* parray, int n);
+
+void func(void);
+int run(void);
 
 int* general_array(int array[])
 {
@@ -113,7 +131,7 @@ void func(void)
     printf("%s\n", __FUNCTION__);
 }
 
-int run(void)
+int main(void)
 {
     long sum;
     int a[MAX];
