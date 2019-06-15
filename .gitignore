@@ -1,5 +1,11 @@
 *.exe
-.vscode
+/.vscode
 *.o
 *.s
 *.bin
+*.a
+*.c.[012]*.*
+*.o.*
+*.so
+*.tar
+*.xz
