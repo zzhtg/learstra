@@ -2,10 +2,12 @@
 #define SINGLE_LIST_H
 
 typedef int ElementType;
-struct Nodes;
-typedef struct Nodes Node;
 typedef struct Nodes* List;
 typedef struct Nodes* Position;
+typedef struct Nodes{
+    ElementType element;
+    Position next;
+}Node;
 
 List MakeEmpty(List list);
 int IsEmpty(List list);
@@ -21,8 +23,3 @@ Position Advance(Position position);
 ElementType Retrieve(Position position);
 
 #endif //SINGLE_LIST_H
-
-struct Nodes{
-    ElementType element;
-    Position next;
-};
