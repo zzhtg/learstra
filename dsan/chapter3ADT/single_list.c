@@ -28,7 +28,7 @@ void PrintList(List list)
         printf("%d\t", list->element);
         list = list->next;
     }
-    printf("\nover list\n");
+    printf("\nlist ending\n");
 }
 
 Position Find(ElementType x, List list)
@@ -107,19 +107,38 @@ Position Advance(Position position)
     return position->next;
 }
 
+List ReverseList(List list)
+{
+    if (list == NULL || list->next == NULL)
+        return list;
+    Position current_position, previous_position, temp_position;
+
+    previous_position = list->next;
+    current_position = previous_position->next;
+    while (current_position != NULL) {
+        temp_position = current_position->next;
+        current_position->next = previous_position;
+        previous_position = current_position;
+        current_position = temp_position;
+    }
+    list->next->next = NULL;
+    list->next = previous_position;
+    return list;
+}
+
 int main()
 {
-    List list;
     ElementType x;
     int c;
-    Position position;
 
-    list = MakeEmpty(list);
-    position = list;
+    List list = MakeEmpty(list);
+    Position position = list;
     while((c = getchar()) != 'q'){
         Insert(c, list, position);
         position = position->next;
     }
+    PrintList(list);
+    list = ReverseList(list);
     PrintList(list);
     DeleteList(list);
     PrintList(list);

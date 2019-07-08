@@ -21,5 +21,6 @@ Position Header(List list);
 Position First(List list);
 Position Advance(Position position);
 ElementType Retrieve(Position position);
+List ReverseList(List list);
 
 #endif //SINGLE_LIST_H
