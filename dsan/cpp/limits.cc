@@ -21,6 +21,7 @@ int main()
     cout << "shrot: " << shortMax << endl;
     cout << "long: " << longMax << endl;
     cout << "long long: " << longLongMax << endl;
+    cout << "unsigned long: " << ULONG_MAX << endl;
 
     return 0;
 }
