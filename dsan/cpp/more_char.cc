@@ -15,7 +15,7 @@ int main()
     cout << "The ASCII code for " << ch << " is " << i << endl;
 
     // using the cout.put() member function to display a char
-    cout << "Displaying char ch using cout.put(ch): ";
+    cout  << "Displaying char ch using cout.put(ch): ";
     cout.put(ch);
 
     // using cout.put() to display a char constant
