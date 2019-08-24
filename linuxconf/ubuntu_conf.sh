@@ -5,10 +5,7 @@ sudo apt install zsh git cmake make vim python3
 
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-mkdir ~/.vim/colors/
-cp ~/.vim/plug/gruvbox/colors/gruvbox.vim ~/.vim/colors/
+curl -fLo ~/.vim/colors/gruvbox.vim --create-dirs https://raw.githubusercontent.com/morhetz/gruvbox/master/colors/gruvbox.vim
 
 # run PlugInstall in vim 
-
 # last run python3 ~/.vim/plugged/YouCompleteMe/install.py --all
