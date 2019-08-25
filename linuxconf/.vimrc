@@ -30,10 +30,8 @@ colorscheme gruvbox
 set background=dark
 source $VIMRUNTIME/delmenu.vim
 source $VIMRUNTIME/menu.vim
-language messages zh_CN.utf-8
 filetype on 
 filetype plugin indent on
-
 
 call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
@@ -43,7 +41,6 @@ Plug 'vim-syntastic/syntastic'
 Plug 'ervandew/supertab'
 Plug 'morhetz/gruvbox'
 call plug#end()
-
 
 map <F3> :NERDTreeMirror<CR>
 map <F3> :NERDTreeToggle<CR>

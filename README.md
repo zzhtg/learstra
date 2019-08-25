@@ -6,3 +6,5 @@ dsan: \<\<Datastructure and algorithm analysiin C\>\>
 
 mcu: learn log about learn mcu in stc89c52
 
+linuxconf: quick configure from my habits
+
