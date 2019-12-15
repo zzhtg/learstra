@@ -18,12 +18,6 @@ int binary_search(const int array[], int x, int n);
 
 int main()
 {
-    run();
-    return 0;
-}
-
-void run(void)
-{
     int *pa = create_array();
     int index;
     index = binary_search(pa, pa[0], MAX);
@@ -31,7 +25,8 @@ void run(void)
         printf("aim: %d\tindex: %d\t result: %d", pa[index], index, pa[0]);
     else
         printf("NOTFOUND");
-    
+
+    return 0;
 }
 
 int* create_array()
