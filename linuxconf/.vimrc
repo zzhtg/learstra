@@ -35,7 +35,6 @@ filetype plugin indent on
 
 call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
-Plug 'Valloric/YouCompleteMe'
 Plug 'scrooloose/nerdtree'
 Plug 'vim-syntastic/syntastic'
 Plug 'ervandew/supertab'
