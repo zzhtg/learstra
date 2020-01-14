@@ -40,5 +40,5 @@ sudo make install
 python3 -m pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pip -U
 python3 -m pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 
-git config global.name "zhaozhan"
-git config global.email "zhaozhan1215@outlook.com"
+git config --global user.name "zhaozhan"
+git config --global user.email "zhaozhan1215@outlook.com"
