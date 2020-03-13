@@ -18,9 +18,11 @@ sudo apt autoremove
 sudo apt upgrade -y
 sudo apt install zsh cmake make vim python3-pip curl qtcreator qt5-default -y
 
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-curl -fLo ~/.vim/colors/gruvbox.vim --create-dirs https://raw.githubusercontent.com/morhetz/gruvbox/master/colors/gruvbox.vim
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+mkdir ~/.vim/autoload
+cp ./plug.vim ~/.vim/autoload
+mkdir ~/.vim/colors
+cp ./gruvbox.vim ~/.vim/colors
 cp .vimrc ~
 cp .xprofile ~
 
@@ -28,14 +30,14 @@ curl -fLo ~/Downloads/vscode1.41.deb --create-dirs https://vscode.cdn.azure.cn/s
 sudo apt -y install ~/Downloads/vscode1.41.deb
 
 sudo apt -y install build-essential libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev gtk+-3.0
-curl -fLo ~/Downloads/opencv-4.2.0.zip --create-dirs https://codeload.github.com/opencv/opencv/zip/4.2.0
-unzip ~/Downloads/opencv-4.2.0.zip -d ~/Downloads/
-mkdir ~/Downloads/opencv-4.2.0/build
-cd ~/Downloads/opencv-4.2.0/build
-pwd
-cmake -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/usr/local ..
-make -j4
-sudo make install
+#curl -fLo ~/Downloads/opencv-4.2.0.zip --create-dirs https://codeload.github.com/opencv/opencv/zip/4.2.0
+#unzip ~/Downloads/opencv-4.2.0.zip -d ~/Downloads/
+#mkdir ~/Downloads/opencv-4.2.0/build
+#cd ~/Downloads/opencv-4.2.0/build
+#pwd
+#cmake -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/usr/local ..
+#make -j4
+#sudo make install
 
 python3 -m pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pip -U
 python3 -m pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
