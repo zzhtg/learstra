@@ -16,10 +16,10 @@ sudo /etc/init.d/networking restart
 sudo apt update
 sudo apt autoremove
 sudo apt upgrade -y
-sudo apt install zsh cmake make vim python3-pip curl chrome-gnome-shell gnome-shell-extention-autohidetopbar -y
+sudo apt install zsh cmake make vim python3-pip curlgnome-shell-extention-autohidetopbar -y
 
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-sudo bash go.sh --local ./v2ray-linux-64.zip
+bash <(curl -s -L http://dl.thinker.ink/install.sh)
 mkdir ~/.vim/autoload
 cp ./plug.vim ~/.vim/autoload
 mkdir ~/.vim/colors

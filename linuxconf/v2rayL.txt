@@ -1,0 +1,18 @@
+所有命令请直接运行，避免导致出现权限问题
+
+使用脚本安装时下载的程序实在ubuntu 18.04 + Python3.6的环境下打包的，因此在Python版本不一致的环境中可能会出现版本不兼容的问题
+
+解决方法(请先运行安装脚本)：
+
+在自己的电脑上重新打包程序，具体方法如下（参考）
+
+运行git clone https://github.com/jiangxufeng/v2rayL.git
+进入项目文件夹，然后运行pip install -r requirements.txt
+运行cd v2rayL-GUI && pyinstaller -F v2rayLui.py -p config.py -p sub2conf_api.py -p v2rayL_api.py -p v2rayL_threads.py -p utils.py -i images/logo.ico -n v2rayLui
+打包后运行mv dist/v2rayLui /usr/bin/v2rayL/v2rayLui 替换安装时下载的程序
+安装
+bash <(curl -s -L http://dl.thinker.ink/install.sh)
+更新
+bash <(curl -s -L http://dl.thinker.ink/update.sh)
+卸载
+bash <(curl -s -L http://dl.thinker.ink/uninstall.sh)
